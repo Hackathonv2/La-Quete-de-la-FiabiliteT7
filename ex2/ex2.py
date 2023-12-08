@@ -10,7 +10,7 @@ def find_machine(graph, contenu):
     l = contenu[0].split(' ')
     machine = int(l[0])
     for k in graph:
-        if len(graph[k]) == 1 and len(graph[graph[k][0]]) == machine - 2:
+        if len(graph[k]) == 1 and graph[k][0] in graph and len(graph[graph[k][0]]) == machine - 2:
             print(k)
 
 
